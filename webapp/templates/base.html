@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{% block title %} Jache_Codes instaagram {% endblock %}</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Orelega+One&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+
+    <header>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-white">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-mdb-toggle="collapse"
+                    data-mdb-target="#navbarExample01" aria-controls="navbarExample01" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarExample01">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item active">
+                            <a class="nav-link" aria-current="page" href="#">
+                                <h3>WELCOME TO THIS PROJECT!!!</h3>
+                            </a>
+                        </li>
+                </div>
+            </div>
+        </nav>
+        <!-- Navbar -->
+    </header>
+    {% with message = get_flashed_messages() %}
+    {% if message %}
+    {% for x in message %}
+    <div class="alert alert-danger d-flex align-items-center" role="alert">
+        <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Danger:">
+            <use xlink:href="#exclamation-triangle-fill" />
+        </svg>
+        <div>
+           {{x}}
+        </div>
+    </div>
+    {% endfor %}
+    {% endif %}
+    {% endwith %}
+
+
+    <div class="info">
+        <p>This is a text encryption website built with python, <br> Use it to generate encrypted messages. the level of
+            encryption is about 75% secured <br>
+            this is still a beta version and does not support the use of special characters including commas and
+            punctuation marks. <br>The use of these characters or numbers will cause an error in the encryption, rather enter numbers in words <br><br> This
+            Project is built by: Japheth </p>
+    </div>
+    <div class="form">
+        <form method="POST">
+            <select class="form-select form-select-sm" aria-label=".form-select-sm example" name="option">
+                <option selected>Encrypt</option>
+                <option value="1">Decrypt</option>
+            </select>
+
+            <div class="form-group">
+                <label for="exampleFormControlTextarea1">Enter your Message to be encrypted</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="article"></textarea>
+            </div>
+            <input type="submit" class="btn btn-outline-success" value="Encrypt/Decrypt">
+        </form>
+    </div>
+    <div class="reveal">
+        <div>
+            {% block content %}
+            <p>The reavealed words will appear here!!!</p>
+            {% endblock %}
+
+        </div>
+    </div>
+<footer>
+   <div class="footer"> &copy; Copyright 2021, The_A_Developers </div>
+</footer>
+
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+    <script src="" async defer></script>
+</body>
+
+</html>

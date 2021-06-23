@@ -1,0 +1,40 @@
+.form {
+    width: 50%;
+    margin: 0 25%;
+}
+
+.info {
+    position: relative;
+    margin-top: 5%;
+    margin-bottom: 4%;
+    text-align: center;
+    font-family: 'New Tegomin', serif;
+    font-size: x-large;
+}
+
+h3 {
+    font-family: 'Dela Gothic One', cursive;
+}
+
+.reveal {
+    margin-top: 4%;
+    margin-bottom: 10%;
+    text-align: center;
+    font-family: 'Pacifico', cursive;
+    font-size: x-large;
+}
+
+.reveal>div {
+    width: 70%;
+    margin: auto;
+}
+
+.footer {
+    background-color: rgba(0, 0, 0, 0.459);
+    text-align: center;
+    color: white;
+}
+
+form {
+    font-family: 'Orelega One', cursive;
+}
