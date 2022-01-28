@@ -9,7 +9,7 @@ for i in data:
 print(encoding) """
 
 def en(message):
-      message = str(message)
+      message = str(message).lower()
       #print(message)
 
       encrypt = message.replace("a","110")
@@ -37,8 +37,10 @@ def en(message):
       encrypt = encrypt.replace("w","117")
       encrypt = encrypt.replace("x","118")
       encrypt = encrypt.replace("y","119")
-      encrypt = encrypt.replace("z","500")
+      encrypt = encrypt.replace("z","500") 
       encrypt = encrypt.replace(" ","2")
+      encrypt = encrypt.replace("\r\n","431")
+     
       return encrypt
       #----------------------------------------------------
 
@@ -56,8 +58,9 @@ def de(encrypt):
     decrypt_mesage = empty_message.split(",")
     #print(decrypt_mesage)
     #print(counter)
-    
+   
     decrypt = empty_message.replace("110","a")
+    
     decrypt = decrypt.replace("111","b")
     decrypt = decrypt.replace("456","c")
     decrypt = decrypt.replace("654","d")
@@ -83,7 +86,13 @@ def de(encrypt):
     decrypt = decrypt.replace("118","x")
     decrypt = decrypt.replace("119","y")
     decrypt = decrypt.replace("500", "z")
+    decrypt = decrypt.replace("431","\r\n")
     decrypt = decrypt.replace(",","")
+  
     decrypt = decrypt.replace("2"," ")
     return decrypt
-
+# string = "he \n hi \n hi"
+# code = "1161472000211647820002116478"
+# output = "1161472 00021164782 000116478"
+# encrypt = en(string.lower())
+# print(encrypt)

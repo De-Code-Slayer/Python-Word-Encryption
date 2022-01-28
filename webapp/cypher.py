@@ -39,12 +39,7 @@ def encrypt_email_data(message):
       encrypt = encrypt.replace("3","π∑∑")
       encrypt = encrypt.replace("2","∑δ∑")
       encrypt = encrypt.replace("1","πππ")
-      encrypt = encrypt.replace("\n","ΞΞΞ")
-
-
-
-
-     
+      encrypt = encrypt.replace("\n","ΞΞΞ")    
       encrypt = encrypt.replace("[","πσπ")
       encrypt = encrypt.replace("]","ππσ")
       encrypt = encrypt.replace("{","σππ")
